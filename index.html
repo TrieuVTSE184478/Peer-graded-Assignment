@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Photo Gallery</title>
+  <style>
+    #image {
+      background-color: #e0e0e0;
+      height: 300px;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      line-height: 300px;
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 20px;
+      border: 2px solid #ccc;
+    }
+    .preview {
+      width: 100px;
+      margin: 10px;
+      border: 2px solid transparent;
+      transition: border 0.3s;
+    }
+    .preview:hover {
+      border: 2px solid #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="image">
+    Hover over an image below to display here.
+  </div>
+
+  <!-- Preview images -->
+  <img class="preview" src="red.png" alt="Red Image" onmouseover="upDate(this)" onmouseout="undo()">
+  <img class="preview" src="green.png" alt="Green Image" onmouseover="upDate(this)" onmouseout="undo()">
+  <img class="preview" src="blue.png" alt="Blue Image" onmouseover="upDate(this)" onmouseout="undo()">
+
+  <!-- Link to JS file -->
+  <script src="gallery.js"></script>
+</body>
+</html>
